@@ -1,0 +1,24 @@
+﻿@using Microsoft.AspNetCore.Components.Web
+@namespace DbDesigner.UI.Pages
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <base href="~/" />
+    <link href="_content/DbDesigner.UI/vendor/bootstrap-4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="_content/DbDesigner.UI/vendor/fontawesome-free-5.14.0-web/css/all.css" rel="stylesheet" />
+    <link href="_content/Z.Blazor.Diagrams/style.css" rel="stylesheet" />
+    <link href="_content/Z.Blazor.Diagrams/default.styles.min.css" rel="stylesheet" />
+    <component type="typeof(HeadOutlet)" render-mode="ServerPrerendered" />
+</head>
+<body>
+    @RenderBody()
+    <script src="_content/DbDesigner.UI/vendor/jquery-3.5.1.slim.min.js"></script>
+    <script src="_content/DbDesigner.UI/vendor/bootstrap-4.5.2/js/bootstrap.bundle.min.js"></script>
+    <script src="_content/Z.Blazor.Diagrams/script.min.js"></script>
+    <script src="_framework/blazor.server.js"></script>
+</body>
+</html>
