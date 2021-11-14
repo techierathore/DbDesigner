@@ -6,6 +6,6 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 	<ItemGroup>
-		<PackageReference Include="Z.Blazor.Diagrams.Core" Version="2.0.0-rc.2" />
+		<PackageReference Include="Z.Blazor.Diagrams.Core" Version="2.1.6" />
 	</ItemGroup>
 </Project>
