@@ -19,12 +19,12 @@
 	<PackageReference Include="Microsoft.AspNetCore.Mvc.ViewFeatures" Version="2.2.0" />  
 	  <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
 	  <PackageReference Include="System.Net.Http.Json" Version="6.0.0" />
-	  <PackageReference Include="Z.Blazor.Diagrams" Version="2.1.6" />	  
+	  <PackageReference Include="Z.Blazor.Diagrams" Version="2.1.6" />
+	  <PackageReference Include="Blazored.LocalStorage" Version="4.1.5" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Pages\" />
-    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\js\" />
   </ItemGroup>
 
   <ItemGroup>

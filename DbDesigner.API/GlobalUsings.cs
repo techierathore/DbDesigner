@@ -1,0 +1,13 @@
+﻿global using System.Collections.Generic;
+global using System.Data;
+global using DbDesigner.Models;
+global using MySqlConnector;
+global using DbDesigner.API.DataAccess;
+global using System.IdentityModel.Tokens.Jwt;
+global using System.Security.Claims;
+global using DbDesigner.API.Repositories;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.IdentityModel.Tokens;
+global using System.Text;
+global using System.Text.Json;
+global using Dapper;
