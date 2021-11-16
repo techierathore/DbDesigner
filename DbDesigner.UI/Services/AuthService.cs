@@ -53,7 +53,7 @@ namespace DbDesigner.UI.Services
             }
         }
 
-        public async Task<bool> RegisterUserAsync(SvcData aLoginUser)
+        public async Task<AppUser> RegisterUserAsync(SvcData aLoginUser)
         {
             aLoginUser.ComplexData = AppEncrypt.EncryptText(aLoginUser.ComplexData);
             string serializedUser = JsonSerializer.Serialize(aLoginUser);
@@ -66,14 +66,10 @@ namespace DbDesigner.UI.Services
                 = new System.Net.Http.Headers.MediaTypeHeaderValue(AppConstants.JsonMediaTypeHeader);
 
             var vSvcResponse = await SvcClient.SendAsync(vRequestMessage);
-            if (vSvcResponse.IsSuccessStatusCode)
-            {
-                return true;
-            }
-            else
-            {
-                throw new Exception(await vSvcResponse.Content.ReadAsStringAsync());
-            }
+            var vResponseBody = await vSvcResponse.Content.ReadAsStreamAsync();
+            SvcData vSvcRetObj = await JsonSerializer.DeserializeAsync<SvcData>(vResponseBody, JsonOptions);
+            string sDeCryptedUser = AppEncrypt.DecryptText(vSvcRetObj.ComplexData);
+            return JsonSerializer.Deserialize<AppUser>(sDeCryptedUser, JsonOptions);
         }
 
         public async Task<AppUser> RefreshTokenAsync(RefreshRequest aRefreshRequest)
