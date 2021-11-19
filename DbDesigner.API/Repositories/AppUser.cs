@@ -39,7 +39,7 @@
             vParams.Add("@pPasswordHash", aEntity.PasswordHash);
             vParams.Add("@pMobileNo", aEntity.MobileNo);
             vParams.Add("@pIsVerified", aEntity.IsVerified);
-            vParams.Add("@pRole", aEntity.Role);
+            vParams.Add("@pRole", aEntity.UserRole);
             vParams.Add("@pInsertedId", lLastInsertedId, direction: ParameterDirection.Output);
             vConn.Execute("AppUserInsert", vParams, commandType: CommandType.StoredProcedure);
             lLastInsertedId = vParams.Get<long>("@pInsertedId");
@@ -56,7 +56,7 @@
             vParams.Add("@pPasswordHash", aEntity.PasswordHash);
             vParams.Add("@pMobileNo", aEntity.MobileNo);
             vParams.Add("@pIsVerified", aEntity.IsVerified);
-            vParams.Add("@pRole", aEntity.Role);
+            vParams.Add("@pRole", aEntity.UserRole);
             vConn.Execute("AppUserUpdate", vParams, commandType: CommandType.StoredProcedure);
         }
 

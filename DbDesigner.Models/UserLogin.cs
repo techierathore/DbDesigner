@@ -3,7 +3,7 @@ namespace DbDesigner.Models
 {
 	public class UserLogin
 	{
-		public int LoginId { get; set; }
+		public long LoginId { get; set; }
 		public long UserId { get; set; }
 		public DateTime LoginDate { get; set; }
 		public string LoginToken { get; set; }

@@ -167,7 +167,7 @@ namespace DbDesigner.API.Controllers
                     new Claim(ClaimTypes.PrimarySid,Convert.ToString(aLoggedInUser.AppUserId)),
                     new Claim(ClaimTypes.Name,aLoggedInUser.FullName),
                     new Claim(ClaimTypes.Email, aLoggedInUser.EmailID),
-                    new Claim(ClaimTypes.Role, aLoggedInUser.Role)
+                    new Claim(ClaimTypes.Role, aLoggedInUser.UserRole)
                 }),
                 Expires = DateTime.UtcNow.AddDays(15),
                 SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(key),

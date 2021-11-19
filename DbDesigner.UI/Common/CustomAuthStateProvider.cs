@@ -77,7 +77,7 @@ namespace DbDesigner.UI.Common
                 new Claim(ClaimTypes.Name, aLoggedInUser.FullName),
                 new Claim(ClaimTypes.Email, aLoggedInUser.EmailID),
                 new Claim(ClaimTypes.MobilePhone, aLoggedInUser.MobileNo),
-                new Claim(ClaimTypes.Role, aLoggedInUser.Role)
+                new Claim(ClaimTypes.Role, aLoggedInUser.UserRole)
              };
             return claims;
         }

@@ -27,7 +27,7 @@ namespace DbDesigner.UI.Pages
 
         private async Task<bool> RegisterUser()
         {
-            PageObj.Role = AppConstants.AppUseRole;
+            PageObj.UserRole = AppConstants.AppUseRole;
             PageObj.IsVerified = true;
             SignUpDetails = new SvcData()
             { ComplexData = JsonSerializer.Serialize(PageObj) };

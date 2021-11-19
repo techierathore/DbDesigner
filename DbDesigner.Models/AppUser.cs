@@ -18,7 +18,7 @@ namespace DbDesigner.Models
 		public string ConfirmPassword { get; set; }
 		public string MobileNo { get; set; }
 		public bool IsVerified { get; set; }
-		public string Role { get; set; }
+		public string UserRole { get; set; }
 		public long ProfilePicId { get; set; }
 		public string ProfilePicPath { get; set; }
 		public string AccessToken { get; set; }
