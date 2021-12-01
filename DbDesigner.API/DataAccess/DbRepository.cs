@@ -1,8 +1,5 @@
 ﻿namespace DbDesigner.API.DataAccess
 {
-    public class DbRepository
-    {
-    }
     /// <summary>
     /// The concrete implementation of a SQL repository
     /// </summary>
