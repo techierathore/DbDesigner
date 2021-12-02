@@ -6,7 +6,7 @@ CREATE TABLE `AppUser` (
   `PasswordHash` varchar(35) NOT NULL,
   `MobileNo` varchar(35) NOT NULL,
   `IsVerified` bit(1) DEFAULT NULL,
-  `Role` varchar(55) NOT NULL,
+  `UserRole` varchar(55) NOT NULL,
   `ProfilePicId` bigint(20) DEFAULT NULL,
 	PRIMARY KEY (`AppUserId`)
 );

@@ -1,8 +1,9 @@
 ﻿
 namespace DbDesigner.API.Controllers
 {
+
     [Route("[controller]")]
-    public class AuthSvcController : Controller
+    public class AuthSvcController : ControllerBase
     {
         private readonly IAppUserRepository UserRepo;
        // private readonly ILoggerManager AppLogger;

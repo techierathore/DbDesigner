@@ -3,7 +3,7 @@ BEGIN
 
 SELECT 
   `AppUserId`, `FirstName`, `LastName`, `EmailID`, `PasswordHash`, `MobileNo`,
-  `IsVerified`, `Role`, `ProfilePicId`
+  `IsVerified`, `UserRole`, `ProfilePicId`
 FROM AppUser;
 
 END;
@@ -12,7 +12,7 @@ CREATE PROCEDURE `AppUserSelect`(pAppUserId long)
 BEGIN
 SELECT 
   `AppUserId`, `FirstName`, `LastName`, `EmailID`, `PasswordHash`, `MobileNo`,
-  `IsVerified`, `Role`, `ProfilePicId`
+  `IsVerified`, `UserRole`, `ProfilePicId`
 FROM AppUser  WHERE `AppUserId` = pAppUserId;
 END;
 
@@ -31,7 +31,7 @@ BEGIN
 INSERT INTO AppUser
 (
   `FirstName`, `LastName`, `EmailID`, `PasswordHash`, `MobileNo`,
-  `IsVerified`, `Role`
+  `IsVerified`, `UserRole`
 )
 VALUES
 (
@@ -57,7 +57,7 @@ SET
 	`FirstName`= pFirstName, `LastName`=pLastName,
 	`EmailID` = pEmailID,`PasswordHash` = pPasswordHash,
 	`MobileNo` = pMobileNo,`IsVerified` = pIsVerified,
-	`Role` = pRole
+	`UserRole` = pRole
 WHERE `AppUserId` = pAppUserId;
 
 END;
@@ -75,7 +75,7 @@ CREATE PROCEDURE `AppUserByEmail`(pEmailID varchar(355))
 BEGIN
 SELECT 
   `AppUserId`, `FirstName`, `LastName`, `EmailID`, `PasswordHash`, `MobileNo`,
-  `IsVerified`, `Role`, `ProfilePicId`
+  `IsVerified`, `UserRole`, `ProfilePicId`
 FROM AppUser  WHERE `EmailID` = pEmailID;
 END;
 
@@ -83,6 +83,6 @@ CREATE PROCEDURE `AppUserByMobile`(pMobileNo varchar(355))
 BEGIN
 SELECT 
   `AppUserId`, `FirstName`, `LastName`, `EmailID`, `PasswordHash`, `MobileNo`,
-  `IsVerified`, `Role`, `ProfilePicId`
+  `IsVerified`, `UserRole`, `ProfilePicId`
 FROM AppUser  WHERE `MobileNo` = pMobileNo;
 END;
